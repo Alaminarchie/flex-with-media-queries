@@ -1,0 +1,108 @@
+:root {
+    --blue: #0A0C19;
+    --dark-violet: #1B1938;
+    --violet: #AA5CDB;
+    --white: #fff;
+    --off-white: rgb(248, 248, 248);
+    --primary: 'Inter', sans-serif;
+    --secndery-font: 'Lexend Deca', sans-serif;
+}
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+}
+.card{
+    width: 70%;
+    height: 70vh;
+    background-color: var(--dark-violet);
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card_text {
+    font-family: var(--primary);
+    height: 100%;
+    width: 50%;
+    background-color: var(--dark-violet);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+.card_title > h1 {
+    margin-bottom: 20px;
+}
+.card_title > h1 > span {
+    color: var(--violet);
+}
+.card_img {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: orange;
+}
+.overly {
+    height: 100%;
+    width: 100%;
+    background-color: var(--violet);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all ease-in-out 300ms;
+}
+.card:hover .overly {
+    opacity: 0;
+    cursor: pointer;
+}
+.card:hover .card_img > img {
+    filter: grayscale(0);
+}
+.card_stat {
+    text-transform: uppercase;
+    display: flex;
+    gap: 20px;
+}
+.card_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    filter: grayscale(100%);
+}
+@media only screen and (max-width: 1100px) {
+    .card_text {
+        width: 80%;
+    }
+    .card_img {
+        width: 20%;
+    }
+}
+@media only screen and (max-width: 800px) {
+   .card {
+    height: 80vh;
+    flex-direction: column-reverse;
+}
+    .card_text {
+        text-align: center;
+    }
+    .card_stat {
+        justify-content: center;
+        margin-top: 15px;
+    }
+   .card_text {
+    width: 100%;
+}
+   .card_img {
+    width: 100%;
+}
+}
