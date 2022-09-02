@@ -89,8 +89,8 @@
 }
 @media only screen and (max-width: 800px) {
    .card {
-    width: 99%;
-    height: 80vh;
+    width: 95%;
+    height: 95vh;
     flex-direction: column-reverse;
 }
     .card_text {
